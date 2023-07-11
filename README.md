@@ -15,3 +15,8 @@ Please feel free to browse through my outputs and intepretations.
 
 All of the data has been cleaned and processed with the pandas library, and the subsequent code written is specific to this data set. It may not be useful for you to one-to-one copy this code into your own project, as it relies on a similar data set, but please feel free to look through the code and use it as inspiration for your own projects!
 ***
+## Personal situation
+I am a junior Data Scientist at BeCode into the second month of my six month training, and this is my first Data Analysis project.
+***
+## Timeline
+This project took four and a half days to complete. Three days of learning data analysis tools and cleaning data, and then one and a half days of analysing data, managing repo and creating a presentation.
