@@ -33,6 +33,11 @@ def check_duplicates(df, key='id'):
     else:
         return print("Every row is unique")
     
+def replace_spaces_with_underscores(df):
+    new_column_names = [col.replace(' ', '_') for col in df.columns]
+    df.columns = new_column_names
+    return df
+    
 # Iterate through rows, then columns and replace booleans with binary
 def replace_boolean(df):
     for ind , row in df.iterrows():
@@ -96,3 +101,45 @@ def check_for_adjascent_data(df, check_column, replacement_column, replacement_v
         if row[check_column] != np.nan and row[replacement_column] == np.nan:
             df.at[index, replacement_column] = replacement_value
         return df
+    
+# Print the number of datapoints with a key maxvalue greater than maxvalue, then return the dataframe without those datapoints
+def clean_greater_outliers(df, key, maxvalue):
+    removal_count = 0 
+    print(
+        "There were", 
+        df[df[key] > maxvalue].shape[0], 
+        "properties with a", 
+        str(key), 
+        "value of more than", 
+        maxvalue,
+        "that have been removed."
+        )
+    removal_count = removal_count + df[df[key] > maxvalue].shape[0]
+    df = df[df[key] <= maxvalue]
+    return df
+
+# Print the number of datapoints with a key maxvalue greater than maxvalue, then return the dataframe without those datapoints
+def clean_lesser_outliers(df, key, maxvalue):
+    removal_count = 0 
+    print(
+        "There were",
+        df[df[key] < maxvalue].shape[0], 
+        "properties with a", 
+        str(key), 
+        " value of less than", 
+        maxvalue,"that have been removed."
+        )
+    removal_count = removal_count + df[df[key] < maxvalue].shape[0]
+    df = df[df[key] >= maxvalue]
+    return df
+
+# Function to clean outliers
+def clean_outliers(houses):
+    houses = clean_greater_outliers(houses, 'price', 2000000)
+    houses = clean_greater_outliers(houses, 'number_of_bedrooms', 10)
+    houses = clean_greater_outliers(houses, 'living_area', 100)
+    houses = clean_greater_outliers(houses, 'total_property_area', 750)
+    houses = clean_greater_outliers(houses, 'total_land_area', 20000)
+    houses = clean_greater_outliers(houses, 'terrace_area', 250)
+    houses = clean_greater_outliers(houses, 'number_of_facades', 4)
+    return houses
