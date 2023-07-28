@@ -24,7 +24,7 @@ regressor = pickle.load(pickle_in)
 # http://127.0.0.1:8000
 @app.get('/')
 def home():
-    return {"Intro" : "Welcome to the model. To use this model you need to input the following parameters as a json"}
+    return {"Intro" : "Welcome to the local version of the PropertyAnalysisBE model. Please navigate to 'http://127.0.0.1:8000/docs' and input your data into the '/pricepredict' dropdown to continue. Check that you have read the README.md to format your input correctly."}
 
 # http://127.0.0.1:8000/pricepredict
 @app.post('/pricepredict')
@@ -59,21 +59,3 @@ def predict(data: propmodel):
     return {
         'prediction': round(prediction[0],2)
         }
-## problems with /docs executions
-
-"""    print(
-        "You can expect the price to be", 
-        regressor.predict([[
-            number_of_bedrooms,
-            living_area,
-            fully_equipped_kitchen,
-            furnished,
-            terrace,
-            garden,
-            total_property_area,
-            total_land_area,
-            swimming_pool,
-            state_of_the_building
-        ]]),   
-        "€ for a property with the above variables."
-    )"""
