@@ -1,25 +1,26 @@
 # PropertyAnalysisBE: A predictive model for calculating a house price in Belgium
 ### *A George Hollingdale project written in Python 3.11*
 # About the repository
-This repository contains a price prediction model for a property in Belgium. After data cleaning, it has been based on a final data set of 3,950 properties scraped from [ImmoWeb](https://www.immoweb.be/en).
+This repository contains a price prediction model for a property in Belgium. After data cleaning, the model has been based on a final data set of 3,950 properties scraped from [ImmoWeb](https://www.immoweb.be/en).
 
 # Project context
-I am a junior scientist at BEcode and this is my first fully pipelined prediction-modeling project. I started this project with about one month's prior programming experience. The main purpose of the project was to *explore* and *learn* a host of new Python libaries, functions and extensiosn, as well as many core aspects of data science whilst building a functioning prediction model. 
+I am a junior scientist at BEcode and this is my first fully pipelined prediction-modeling project. I started this project with about one month's prior programming experience. The main purpose of the project was to *explore* and *learn* a host of new Python libaries, functions and extensions, as well as many core aspects of data science, whilst building a functioning prediction model. 
 
 It should go without saying, the journey was *far* more important than the destination!
 
 
 # What to expect
 In this respository you can expect to find:
-* The core proeprty data I previously scraped from ImmoWeb on 05/07/2023.
-* Subsequently cleaned data sets.
+* The [core property data](data/properties.csv) I previously scraped from ImmoWeb on 05/07/2023.
+* Subsequently [cleaned data set](data/cleaned_output.csv).
 * Some notebooks containing:
-  * The data cleaning process
-  * Some brief analysis
-  * Some exploration of differing prediction models
-* A final model
-* A working API for predicting a house price using my model
-* My source code 
+  * The [data cleaning process](model-building/1_Data_modeling_cleaning.ipynb)
+  * Some [brief analysis](notebooks/data_analysis.ipynb)
+   * The [output graphs](assets) of the analysis
+  * Some exploration of differing [prediction models (files 2 & 3)](/model-building/)
+* A [final model](/model-building/4_data_modeling_model.ipynb)
+* A [working API](app.py) for predicting a house price using my model
+* My [source code](src)
 
 
 The model is far from perfect, but it has served as a useful tool for me to learn from, and there are many, *many*, things that I'd do differently in my next project.
