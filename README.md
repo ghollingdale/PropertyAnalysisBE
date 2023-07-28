@@ -44,7 +44,7 @@ You will also want to install the necessary libaries for this project by running
 > pip install -r requirements.txt
 
 # Usage
- To activate the API you should naviagate to the repositories directory in your terminal and enter:
+ To activate the API you should naviagate to the repository's directory in your terminal and enter:
 
 > uvicorn app:app --reload
 
