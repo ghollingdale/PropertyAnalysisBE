@@ -11,7 +11,7 @@ It should go without saying, the journey was *far* more important than the desti
 
 # What to expect
 In this respository you can expect to find:
-* The [core property data](data/properties.csv) I previously scraped from ImmoWeb on 05/07/2023.
+* The [core property data](data/properties.csv) I previously scraped from ImmoWeb on 05/07/2023
 * Subsequently [cleaned data set](data/cleaned_output.csv).
 * Some notebooks containing:
   * The [data cleaning process](model-building/1_Data_modeling_cleaning.ipynb)
