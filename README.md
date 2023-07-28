@@ -67,7 +67,7 @@ Each variable is taken as either binary or a float. The binary inputs use `1` fo
 }
 ```
 # Timeline
-This project had a timline of 12 days, 5 of which were spent on analysis, four on regression and modeling three on deployment.
+This project had a timline of 12 days, 5 of which were spent on analysis, 4 on regression and modeling 3 on deployment.
 
 # Contributors
 I am the sole contributor to this analysis project. You can find my github profile [here](https://github.com/ghollingdale).
